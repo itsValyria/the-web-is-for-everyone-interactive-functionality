@@ -393,6 +393,10 @@ footer {
     font-size: 1.2em;
   }
 
+  .main__index--overlay a {
+    font-size: 1.4em;
+  }
+
   .main__index--article {
     display: flex;
     align-items: center;
@@ -415,6 +419,10 @@ footer {
 
   .main__index--article h2 {
     font-size: 2em;
+  }
+
+  .main__index--article a {
+    font-size: 1.4em;
   }
 
   .vraag-aanbod {
