@@ -456,7 +456,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2em 4em;
+    padding: 2em 10em;
   }
 
   header a {
@@ -486,6 +486,53 @@ footer {
 
   .menu__item:last-of-type {
     padding-right: 0;
+  }
+
+  .main__index--overlay {
+    width: 32em;
+    right: 10em;
+    left: unset;
+  }
+
+  .main__index--article {
+    padding: 2em 10em;
+  }
+
+  .main__index--article:last-of-type {
+    margin-bottom: 4em;
+  }
+
+  .main__index--article img {
+    height: 24em;
+  }
+
+  .main__uitgelicht {
+    padding: 2em 8em;
+    margin: 0;
+  }
+  .main__uitgelicht h2 {
+    font-size: 2.6em;
+  }
+
+  .main__index--services {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main__index--article h2 {
+    font-size: 2.6em;
+  }
+
+  .main__index--article p {
+    font-size: 1.8em;
+  }
+
+  .main__index--article a {
+    font-size: 2em;
+  }
+
+  footer {
+    padding: 2em 10em;
   }
 }
 
