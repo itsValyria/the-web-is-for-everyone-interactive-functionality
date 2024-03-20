@@ -538,14 +538,27 @@ footer {
 
 @media screen and (min-width: 1599px) {
   header {
-    padding: 2em 12em;
+    padding: 2em 14em;
   }
 
-  .menu__item {
-    padding: 0 1.6em;
+  .main__index--hero {
+    min-height: 32em;
+  }
+
+  .main__index--overlay {
+    right: 14em;
+    top: 12em;
+  }
+
+  .main__index--article {
+    padding: 2em 14em;
+  }
+
+  .main__uitgelicht {
+    padding: 2em 12em;
   }
 
   footer {
-    padding: 2em 12em;
+    padding: 2em 14em;
   }
 }
