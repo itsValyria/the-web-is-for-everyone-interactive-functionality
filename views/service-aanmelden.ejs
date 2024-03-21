@@ -1,7 +1,7 @@
 <!-- Hier word de header geinclude -->
 <%- include('./partials/head') %>
 
-<main>
+<main class="main__aanmelden">
   <form>
 
     <!-- Contact Gegevens -->
@@ -9,40 +9,44 @@
 
     <section class="flex">
       <section class="flex column">
-        <label for="name">Voornaam</label>
+        <label for="name">Voornaam<span>*</span></label>
         <input type="text" id="name" required>
       </section>
       <section class="flex column">
-        <label for="surname">Achternaam</label>
+        <label for="surname">Achternaam<span>*</span></label>
         <input type="text" id="surname" required>
       </section>
-      <label for="email">E-mail</label>
-      <input type="text" id="email" required>
     </section>
+    <label for="email">E-mail<span>*</span></label>
+    <input type="text" id="email" required>
 
     <!-- Initiatief gegevens -->
     <h2>Initiatief gegevens</h2>
 
-    <label for="title">Titel</label>
+    <section class="radio-buttons">
+      <p>
+        <input type="radio" id="vraag" name="contact" value="vraag" checked/>
+        <label for="type">Vraag</label>
+      </p>
+      <p>
+        <input type="radio" id="aanbod" name="contact" value="aanbod"/>
+        <label for="type">Aanbod</label>
+      </p>
+    </section>
+
+    <label for="title">Titel<span>*</span></label>
     <input type="text" id="title" required>
     
-    <label for="short_description">Initiatief in 3 zinnen</label>
+    <label for="short_description">Initiatief in 3 zinnen<span>*</span></label>
     <input type="text" id="short__description" required>
     
-    <label for="long_description">Beschrijving</label>
+    <label for="long_description">Beschrijving<span>*</span></label>
     <input type="text" id="long__description" required>
-
-    <section class="radio-buttons">
-      <input type="radio" id="vraag" name="contact" value="vraag" checked/>
-      <label for="type">Vraag</label>
-      <input type="radio" id="aanbod" name="contact" value="aanbod"/>
-      <label for="type">Aanbod</label>
-    </section>
 
     <label for="location">Locatie</label>
     <input type="text" id="location">
 
-    <label for="neighbourhood">Locatie</label>
+    <label for="neighbourhood">Buurt<span>*</span></label>
     <select name="neighbourhood" id="neighbourhood" required>
       <option value="volvo">Slotervaart</option>
       <option value="saab">Kinkerbuurt</option>
