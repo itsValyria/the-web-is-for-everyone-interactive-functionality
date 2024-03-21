@@ -22,6 +22,10 @@
   --light--green-accent: #e3ebdd;
 }
 
+/* -------------- Service Detail Pagina -------------- */
+
+
+
 /* -------------- Service Aanmelden -------------- */
 
 .flex {
@@ -108,6 +112,34 @@ select:focus-visible {
   height: 16em;
 }
 
+#image {
+  background-color: var(--base--grey-97);
+  border: 1px solid var(--base--grey-62);
+  border-radius: 8px;
+  height: 40px;
+  width: 16.6em;
+  font-family: 'Medium';
+  font-size: 1em;
+}
+
+#image::file-selector-button{
+  border: none;
+  border-radius: 8px;
+  color: var(--base--white);
+  background-color: var(--primary--green-accent);
+  border: none;
+  height: 40px;
+  cursor: pointer;
+  transition: all .25s ease-in;
+  cursor: pointer;
+}
+
+#image::file-selector-button:hover{
+  background-color: var(--base--white);
+  color: var(--primary--green-accent);
+  transition: all .25s ease-in;
+}
+
 input[type="submit"] {
   background-color: var(--primary--green-accent);
   border: 2px solid var(--primary--green-accent);
@@ -168,6 +200,35 @@ input[type="submit"] {
     transform: scale(1);
 }
 
+.service__aanmelden {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20em;
+  margin: 4em auto 16em auto;
+  text-align: center;
+}
+
+.service__aanmelden img {
+  max-height: 16em;
+  filter: hue-rotate(290deg);
+  z-index: -1;
+}
+
+.service__aanmelden h2 {
+  font-size: 2em;
+}
+
+.service__aanmelden a {
+  color: var(--primary--green-accent);
+  font-size: 1.6em;
+}
+
+.service__aanmelden a:hover {
+  text-decoration: underline;
+}
+
 /* -------------- Media Queries -------------- */
 
 @media screen and (min-width: 768px) {
@@ -188,6 +249,8 @@ input[type="submit"] {
 
   select {
     font-size: 1.2em;
+    width: 29.6em;
+    margin: 1em 0;
   }
 
   input[type="submit"] {
@@ -207,14 +270,67 @@ input[type="submit"] {
   .main__aanmelden--intro p {
     font-size: 1.4em;
   }
+
+  #image {
+    width: 33em;
+  }
+
+  .service__aanmelden {
+    width: 40em;
+    margin: 10em auto 20em auto;
+  }
+  
+  .service__aanmelden img {
+    max-height: 24em;
+  }
+  
+  .service__aanmelden h2 {
+    font-size: 3em;
+  }
+  
+  .service__aanmelden a {
+    font-size: 2em;
+  }
 }
 
 @media screen and (min-width: 1099px) {
 
+  input {
+    width: 50em;
+  }
+
+  select {
+    width: 47.8em;
+  }
+
+  .main__aanmelden--intro {
+    width: 56.6em;
+  }
+
+  .main__aanmelden--intro h1 {
+    font-size: 2.6em;
+  }
+
+  .main__aanmelden--intro p {
+    font-size: 1.4em;
+  }
+
+  #image {
+    width: 33em;
+  }
+
+  .service__aanmelden {
+    width: 50em;
+    margin: 2em auto 20em auto;
+  }
+  
+  .service__aanmelden img {
+    max-height: 24em;
+  }
 }
 
 @media screen and (min-width: 1599px) {
-
+  
 }
 
 @media screen and (min-width: 1799px) {

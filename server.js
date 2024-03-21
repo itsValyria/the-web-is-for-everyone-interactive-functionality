@@ -54,11 +54,11 @@ app.get('/service/:id', function (request, response) {
   })
 })
 
-// POST route for handling form submissions
+// POST route om data van het formulier te handlen
 app.post('/service-aanmelden', function (request, response) {
   const formData = request.body;
 
-  // Create a new object with form data
+  // Maak een nieuw object met formData
   const newAdvertisement = {
     name: formData.name,
     surname: formData.surname,
@@ -76,10 +76,10 @@ app.post('/service-aanmelden', function (request, response) {
     image: formData.image
   };
 
-  // Push the new object to the all_advertisements_data array
+  // Push het nieuwe object naar het all_advertisements_data array
   all_advertisements_data.push(newAdvertisement);
 
-  // Redirect back to the service-aanmelden page
+  // Redirect naar de gelukt pagina
   response.redirect('/service-aanmelden-gelukt');
 });
 
