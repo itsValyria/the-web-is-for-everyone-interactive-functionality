@@ -1,7 +1,71 @@
 <!-- Hier word de header geinclude -->
 <%- include('./partials/head') %>
 
-<main></main>
+<main>
+  <form>
+
+    <!-- Contact Gegevens -->
+    <h2>Contact gegevens</h2>
+
+    <section class="flex">
+      <section class="flex column">
+        <label for="name">Voornaam</label>
+        <input type="text" id="name" required>
+      </section>
+      <section class="flex column">
+        <label for="surname">Achternaam</label>
+        <input type="text" id="surname" required>
+      </section>
+      <label for="email">E-mail</label>
+      <input type="text" id="email" required>
+    </section>
+
+    <!-- Initiatief gegevens -->
+    <h2>Initiatief gegevens</h2>
+
+    <label for="title">Titel</label>
+    <input type="text" id="title" required>
+    
+    <label for="short_description">Initiatief in 3 zinnen</label>
+    <input type="text" id="short__description" required>
+    
+    <label for="long_description">Beschrijving</label>
+    <input type="text" id="long__description" required>
+
+    <section class="radio-buttons">
+      <input type="radio" id="vraag" name="contact" value="vraag" checked/>
+      <label for="type">Vraag</label>
+      <input type="radio" id="aanbod" name="contact" value="aanbod"/>
+      <label for="type">Aanbod</label>
+    </section>
+
+    <label for="location">Locatie</label>
+    <input type="text" id="location">
+
+    <label for="neighbourhood">Locatie</label>
+    <select name="neighbourhood" id="neighbourhood" required>
+      <option value="volvo">Slotervaart</option>
+      <option value="saab">Kinkerbuurt</option>
+      <option value="mercedes">De Baarsjes</option>
+      <option value="audi">Westerpark</option>
+    </select>
+
+    <label for="start_date">Start datum</label>
+    <input type="date" id="start_date" required>
+    <label for="end_date">Eind datum</label>
+    <input type="date" id="end_date" required>
+
+    <label for="time">Start tijd</label>
+    <input type="time" id="time" required>
+    <label for="end_time">Eind tijd</label>
+    <input type="time" id="end_time" required>
+
+    <!-- <label for="image">Foto</label> -->
+
+    <input type="submit">
+
+  </form>
+</main>
 
 <!-- Hier word de foot geinclude -->
 <%- include('./partials/foot') %>

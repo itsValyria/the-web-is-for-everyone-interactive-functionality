@@ -31,6 +31,10 @@ app.get('/overzicht', function (request, response) {
   response.render('overzicht', {services: all_advertisements_data})
 })
 
+app.get('/service-aanmelden', function (request, response) {
+  response.render('service-aanmelden', {services: all_advertisements_data})
+})
+
 // Maak een POST route voor de index
 app.post('/', function (request, response) {
   // Er is nog geen afhandeling van POST, redirect naar GET op /
