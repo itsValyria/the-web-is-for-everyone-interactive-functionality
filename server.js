@@ -35,6 +35,10 @@ app.get('/service-aanmelden', function (request, response) {
   response.render('service-aanmelden', {services: all_advertisements_data})
 })
 
+app.get('/service-aanmelden-gelukt', function (request, response) {
+  response.render('service-aanmelden-gelukt', {services: all_advertisements_data})
+})
+
 // Maak een POST route voor de index
 app.post('/', function (request, response) {
   // Er is nog geen afhandeling van POST, redirect naar GET op /
@@ -49,6 +53,35 @@ app.get('/service/:id', function (request, response) {
     response.render('service', {service: apiData.data})
   })
 })
+
+// POST route for handling form submissions
+app.post('/service-aanmelden', function (request, response) {
+  const formData = request.body;
+
+  // Create a new object with form data
+  const newAdvertisement = {
+    name: formData.name,
+    surname: formData.surname,
+    email: formData.email,
+    contact: formData.contact,
+    title: formData.title,
+    short_description: formData.short_description,
+    long_description: formData.long_description,
+    location: formData.location,
+    neighbourhood: formData.neighbourhood,
+    start_date: formData.start_date,
+    end_date: formData.end_date,
+    start_time: formData.start_time,
+    end_time: formData.end_time,
+    image: formData.image
+  };
+
+  // Push the new object to the all_advertisements_data array
+  all_advertisements_data.push(newAdvertisement);
+
+  // Redirect back to the service-aanmelden page
+  response.redirect('/service-aanmelden-gelukt');
+});
 
 // Stel het poortnummer in waar express op moet gaan luisteren
 app.set('port', process.env.PORT || 8000)
