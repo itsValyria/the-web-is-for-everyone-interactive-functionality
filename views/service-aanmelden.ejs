@@ -11,69 +11,73 @@
   <form action="/service-aanmelden" method="POST">
 
     <!-- Contact Gegevens -->
-    <h2>Contact gegevens</h2>
-  
-    <section class="flex">
-      <section class="flex column">
+   <fieldset class="flex">
+      <legend>Contact gegevens</legend>
+      <p class="flex column">
         <label for="name">Voornaam<span>*</span></label>
         <input type="text" id="name" name="name" required>
-      </section>
-      <section class="flex column">
+      </p>
+      <p class="flex column">
         <label for="surname">Achternaam<span>*</span></label>
         <input type="text" id="surname" name="surname" required>
-      </section>
-    </section>
-    <label for="email">E-mail<span>*</span></label>
-    <input type="text" id="email" name="email" required>
+      </p>
+      <p>
+        <label for="email">E-mail<span>*</span></label>
+        <input type="text" id="email" name="email" required>
+      </p>
+    </fieldset>
   
     <!-- Initiatief gegevens -->
-    <h2>Initiatief gegevens</h2>
-  
-    <section class="radio-buttons">
-      <p>
-        <input type="radio" id="vraag" name="contact" value="vraag" checked/>
-        <label for="type">Vraag</label>
-      </p>
-      <p>
-        <input type="radio" id="aanbod" name="contact" value="aanbod"/>
-        <label for="type">Aanbod</label>
-      </p>
-    </section>
-  
-    <label for="title">Titel<span>*</span></label>
-    <input type="text" id="title" name="title" required>
+    <fieldset>
+      <legend>Initiatief gegevens</legend>
+      <div class="radio-buttons">
+        <p>
+          <input type="radio" id="vraag" name="contact" value="vraag" checked/>
+          <label for="type">Vraag</label>
+        </p>
+        <p>
+          <input type="radio" id="aanbod" name="contact" value="aanbod"/>
+          <label for="type">Aanbod</label>
+        </p>
+      </div>
     
-    <label for="short_description">Initiatief in 3 zinnen<span>*</span></label>
-    <input type="text" id="short_description" name="short_description" required>
+      <label for="title">Titel<span>*</span></label>
+      <input type="text" id="title" name="title" required>
+      
+      <label for="short_description">Initiatief in 3 zinnen<span>*</span></label>
+      <input type="text" id="short_description" name="short_description" required>
+      
+      <label for="long_description">Beschrijving<span>*</span></label>
+      <input type="text" id="long_description" name="long_description" required>
     
-    <label for="long_description">Beschrijving<span>*</span></label>
-    <input type="text" id="long_description" name="long_description" required>
+      <label for="location">Locatie</label>
+      <input type="text" id="location" name="location">
+    
+      <label for="neighbourhood">Buurt<span>*</span></label>
+      <select name="neighbourhood" id="neighbourhood" name="neighbourhood" required>
+        <option value="volvo">Slotervaart</option>
+        <option value="saab">Kinkerbuurt</option>
+        <option value="mercedes">De Baarsjes</option>
+        <option value="audi">Westerpark</option>
+      </select>
+    
+      <label for="start_date">Start datum</label>
+      <input type="date" id="start_date" name="start_date" required>
+      <label for="end_date">Eind datum</label>
+      <input type="date" id="end_date" name="end_date" required>
+    
+      <label for="time">Start tijd</label>
+      <input type="time" id="time" name="time" required>
+      <label for="end_time">Eind tijd</label>
+      <input type="time" id="end_time" name="end_time" required>
+    
+      <p class="flex column upload">
+        <label for="image">Foto uploaden</label>
+        <input type="file" id="image" name="image" accept="image/png, image/jpg" required>
+      </p>
   
-    <label for="location">Locatie</label>
-    <input type="text" id="location" name="location">
-  
-    <label for="neighbourhood">Buurt<span>*</span></label>
-    <select name="neighbourhood" id="neighbourhood" name="neighbourhood" required>
-      <option value="volvo">Slotervaart</option>
-      <option value="saab">Kinkerbuurt</option>
-      <option value="mercedes">De Baarsjes</option>
-      <option value="audi">Westerpark</option>
-    </select>
-  
-    <label for="start_date">Start datum</label>
-    <input type="date" id="start_date" name="start_date" required>
-    <label for="end_date">Eind datum</label>
-    <input type="date" id="end_date" name="end_date" required>
-  
-    <label for="time">Start tijd</label>
-    <input type="time" id="time" name="time" required>
-    <label for="end_time">Eind tijd</label>
-    <input type="time" id="end_time" name="end_time" required>
-  
-    <label for="image">Foto uploaden</label>
-    <input type="file" id="image" name="image" accept="image/png, image/jpg" required>
-
-    <input type="submit">
+      <input type="submit">
+    </fieldset>
   
   </form>
   
