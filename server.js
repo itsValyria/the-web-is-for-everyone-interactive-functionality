@@ -4,6 +4,9 @@ import express from 'express';
 // Importeer de zelfgemaakte functie fetchJson uit de ./helpers map
 import fetchJson from './helpers/fetch-json.js';
 
+// Importeer slugify
+import slugify from 'slugify';
+
 // Maak een nieuwe express app aan
 const app = express();
 app.use(express.json());
@@ -36,6 +39,10 @@ app.get('/overzicht', function (request, response) {
 // Maak een GET route voor een detail pagina
 app.get('/service/:id', function (request, response) {
   response.render('service', { services: all_advertisements_data });
+});
+
+all_advertisements_data.forEach(service => {
+  service.slug = slugify(service.title, { lower: true });
 });
 
 // GET route for the service aanmelden pagina
