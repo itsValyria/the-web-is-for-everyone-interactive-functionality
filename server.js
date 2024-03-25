@@ -41,6 +41,7 @@ app.get('/service/:id', function (request, response) {
   response.render('service', { services: all_advertisements_data });
 });
 
+// Zorg ervoor dat de URL leesbaar is door de titel te weergeven in plaats van het ID
 all_advertisements_data.forEach(service => {
   service.slug = slugify(service.title, { lower: true });
 });
