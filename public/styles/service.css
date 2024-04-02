@@ -20,6 +20,9 @@
   --primary--green-accent: #41bd66;
   --secondary--green-accent: #a0d7b0;
   --light--green-accent: #e3ebdd;
+
+  --primary-red-accent: #c32222;
+  --secondary-red-accent: #fa7d7d;
 }
 
 /* -------------- Service Detail Pagina -------------- */
@@ -74,6 +77,16 @@ input {
 input:focus-visible {
   border: 2px solid var(--primary--green-accent);
   outline: none;
+}
+
+input:valid:not(input[type="submit"], #location) {
+  border-color: var(--primary--green-accent);
+  background: var(--light--green-accent);
+}
+
+input:required:focus:invalid {
+  border-color: var(--primary-red-accent);
+  background: var(--secondary-red-accent);
 }
 
 select {

@@ -78,6 +78,9 @@ const newAdvertisement = {
   end_time: formData.end_time,
 };
 
+// Genereer een slug voor de nieuwe advertentie
+newAdvertisement.slug = slugify(formData.title, { lower: true });
+
 // Push het nieuwe object naar het all_advertisements_data array
 all_advertisements_data.push(newAdvertisement);
 
