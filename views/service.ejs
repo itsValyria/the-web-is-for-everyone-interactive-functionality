@@ -1,7 +1,10 @@
 <!-- Hier word de header geinclude -->
 <%- include('./partials/head') %>
 
-<main></main>
+<main>
+    <h1><%= service.title %></h1>
+    <img class="service__image" src="https://fdnd-agency.directus.app/assets/<%= service.image %>">
+</main>
 
 <!-- Hier word de foot geinclude -->
 <%- include('./partials/foot') %>

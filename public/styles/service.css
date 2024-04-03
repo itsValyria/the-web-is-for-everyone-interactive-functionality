@@ -173,6 +173,7 @@ input[type="submit"] {
     display: inline-block;
     color: var(--base--black);
 }
+
 [type="radio"]:checked + label:before,
 [type="radio"]:not(:checked) + label:before {
     content: '';

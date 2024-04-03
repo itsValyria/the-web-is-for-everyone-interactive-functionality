@@ -36,9 +36,23 @@ app.get('/overzicht', function (request, response) {
   response.render('overzicht', { services: all_advertisements_data });
 });
 
-// Maak een GET route voor een detail pagina
-app.get('/service/:id', function (request, response) {
-  response.render('service', { services: all_advertisements_data });
+// GET route for displaying the service page with specific service data based on slug
+app.get('/service/:slug', function (request, response) {
+  // Extract the service slug from the request parameters
+  const serviceSlug = request.params.slug;
+
+  // Find the service with the matching slug from the all_advertisements_data array
+  const service = all_advertisements_data.find(service => service.slug === serviceSlug);
+
+  // If the service with the given slug is not found, return a 404 error
+  if (!service) {
+    console.error(`Service with slug ${serviceSlug} not found`);
+    response.status(404).send('Service not found');
+    return;
+  }
+
+  // Render the service.ejs template and pass the found service data to it
+  response.render('service', { service: service });
 });
 
 // Zorg ervoor dat de URL leesbaar is door de titel te weergeven in plaats van het ID
