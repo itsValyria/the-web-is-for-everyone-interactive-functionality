@@ -170,6 +170,7 @@ input {
   padding: 0.6em;
   margin: 1em 0;
   font-family: 'Medium';
+  -webkit-appearance: none;
 }
 
 input:focus-visible {
