@@ -171,6 +171,8 @@ input {
   margin: 1em 0;
   font-family: 'Medium';
   -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
 }
 
 input:focus-visible {
@@ -194,6 +196,9 @@ select {
   width: 18rem;
   padding: 0.6em;
   font-family: 'Medium';
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
 }
 
 select:focus-visible {
