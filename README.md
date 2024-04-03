@@ -17,7 +17,7 @@
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 De Buurtcampus is een platform waar vraag en aanbod in Amsterdam West samen komt.
 
-![image](https://github.com/itsValyria/the-web-is-for-everyone-interactive-functionality/assets/76444716/184f5c6f-9819-4c09-89ec-cf0e53063c7d)
+![Recording2024-03-21at10 53 131-ezgif com-resize](https://github.com/itsValyria/the-web-is-for-everyone-interactive-functionality/assets/76444716/6b616806-3eef-41c8-be8a-45571208b18e)
 
 ## Inhoudsopgave
 
