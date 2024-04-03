@@ -22,6 +22,12 @@
   --light--green-accent: #e3ebdd;
 }
 
+@media (prefers-contrast: more) {
+  :root {
+    --primary--green-accent: #2e7c46;
+  };
+}
+
 /* ------------- Elements ------------- */
 
 html {
