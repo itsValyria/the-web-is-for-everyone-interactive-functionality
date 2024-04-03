@@ -5,17 +5,20 @@
 
     <section class="service__info">
         <img class="service__image" src="https://fdnd-agency.directus.app/assets/<%= service.image %>">
-        <h1><%= service.title %></h1>
-        <h2><%= service.categories %></h2>
-        <%- service.long_description %>
-        <button>Aanmelden &#10140;</button>
+        <section>
+            <h1><%= service.title %></h1>
+            <h2><%= service.categories %></h2>
+            <%- service.long_description %>
+            <button>Aanmelden &#10140;</button>
+        </section>
     </section>
 
     <ul class="serivce__list">
         <li class="service__list--item">
             <img src="/assets/calendar.svg" alt="">
             <h3>Wanneeer</h3>
-            <h4>12 september 2024</h4>
+            <p>12 september 2024</p>
+            <p>12:00 - 17:00</p>
         </li>
         <li class="service__list--item">
             <img src="/assets/location.svg" alt="">

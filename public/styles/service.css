@@ -416,6 +416,25 @@ legend {
   .radio-buttons {
     margin: 2em 0;
   }
+
+  .service__list--item {
+    max-width: 30em;
+    margin: 2em auto;
+  }
+
+  .service__info {
+    max-width: 30em;
+    margin: 2em auto;
+  }
+
+  .service__info img {
+    height: 20em;
+    min-width: 30em;
+  }
+
+  .service__info h1 {
+    font-size: 1.4em;
+  }
 }
 
 @media screen and (min-width: 1099px) {
@@ -468,12 +487,60 @@ legend {
   .radio-buttons {
     justify-content: flex-start;
   }
+
+  .service__list--item {
+    max-width: 40em;
+    margin: 2em auto;
+  }
+
+  .service__info {
+    max-width: 40em;
+    margin: 2em auto;
+  }
+
+  .service__info img {
+    height: 20em;
+    min-width: 40em;
+  }
 }
 
 @media screen and (min-width: 1599px) {
+  .service__main {
+    max-width: 90em;
+    margin: 0 auto;
+  }
 
-}
+  .service__info {
+    flex-direction: row;
+    grid-area: main;
+  }
 
-@media screen and (min-width: 1799px) {
+  .service__list--item {
+    grid-area: li;
+  }
 
+  .service__main {
+    display: grid;
+    grid-template-areas: 
+    "main"
+    "li";
+  }
+
+  .serivce__list {
+    display: flex;
+  }
+
+  .service__list--item {
+    min-width: 24em;
+  }
+
+  .service__info {
+    min-width: 84em;
+    gap: 4em;
+  }
+
+  .service__info img {
+    min-width: 32em;
+    min-height: 24em;
+  }
 }
